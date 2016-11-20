@@ -1,21 +1,35 @@
 package com.each.www.each.activity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.each.www.each.R;
 import com.each.www.each.utils.ActivityCollector;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private long exitTime = 0;
+    private Button login;
+    private Button register;
+    private Button full;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        login = (Button)findViewById(R.id.login_main);
+        login.setOnClickListener(this);
+
+        register = (Button)findViewById(R.id.register_main);
+        register.setOnClickListener(this);
+
+        full = (Button)findViewById(R.id.fullscreen_main);
+        full.setOnClickListener(this);
         ActivityCollector.addActivity(this);
     }
 
@@ -51,5 +65,19 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.login_main:
+                startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                break;
+            case R.id.register_main:
+                startActivity(new Intent(MainActivity.this,RegisterActivity.class));
+                break;
+            case R.id.fullscreen_main:
+                startActivity(new Intent(MainActivity.this,FullscreenActivity.class));
+        }
     }
 }

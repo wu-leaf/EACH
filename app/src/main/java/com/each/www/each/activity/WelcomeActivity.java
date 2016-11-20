@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
+
 import com.each.www.each.R;
 import com.each.www.each.utils.ActivityCollector;
 

@@ -4,6 +4,11 @@ import android.app.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Created by veyron 2016/10/18/14:33.
+ * 全体 Activity管理类
+ */
 public class ActivityCollector {
     public static List<Activity> activties;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,4 +14,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"/>
-</RelativeLayout>
+    <Button
+        android:id="@+id/login_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录页面"/>
+    <Button
+        android:id="@+id/register_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册页面"/>
+    <Button
+        android:id="@+id/fullscreen_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全屏页面"/>
+</LinearLayout>
