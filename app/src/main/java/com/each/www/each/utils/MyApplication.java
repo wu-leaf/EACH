@@ -12,12 +12,22 @@ import com.android.volley.toolbox.Volley;
 public class MyApplication extends Application{
     private static RequestQueue queues ;
     private int value;
+    private boolean test;
+
+    public boolean isTest() {
+        return test;
+    }
+
+    public void setTest(boolean test) {
+        this.test = test;
+    }
+
+
     @Override
     public void onCreate() {
         super.onCreate();
         queues = Volley.newRequestQueue(getApplicationContext());
         setValue(0);
-
     }
     public int getValue() {
         return value;
